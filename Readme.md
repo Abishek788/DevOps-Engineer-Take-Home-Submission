@@ -26,7 +26,7 @@ At Linq, maintaining infrastructure uptime, performance, and reliability is crit
 ### 🧰 Tools to Collect Metrics
 - [Node Exporter](https://github.com/prometheus/node_exporter): Exposes system metrics
 - [Prometheus](https://prometheus.io): Scrapes and stores metrics
-- Optional: Python script to generate mock telemetry data
+
 
 ### 💾 Metrics Storage Backend
 - **Prometheus** is used as the time-series database for its integration with alerting and Grafana
