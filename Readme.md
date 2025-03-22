@@ -162,7 +162,3 @@ These conditions are written in `alert.rules.yml`.
               | (Dashboard)  |
               +--------------+
 
-
-
-Happy coding!# DevOps-Engineer-Take-Home-Submission
-# DevOps-Engineer-Take-Home-Submission
