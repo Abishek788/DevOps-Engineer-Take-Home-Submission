@@ -101,6 +101,67 @@ devops-monitoring/
 ![Prometheus](screenshots/prometheus-targets.png)
 
 
+## 🧱 Tools Used (and Why!)
+
+| Tool             | Purpose | Why I Chose It |
+|------------------|---------|----------------|
+| **Node Exporter** | Collects system metrics like CPU, RAM, Disk | It's lightweight, easy to use, and the official Prometheus exporter |
+| **Prometheus**   | Scrapes and stores metrics data | Open-source, powerful, and integrates perfectly with alerting and Grafana |
+| **Alertmanager** | Sends alerts via Slack (or email/SMS) | Comes with Prometheus and supports many notification methods |
+| **Grafana**      | Shows metrics in a nice dashboard | Very popular, highly customizable, and easy to connect to Prometheus |
+| **Docker Compose** | Runs all tools together | Makes the whole setup easy to run with just one command |
+
+---
+
+## 🔄 How It All Works Together
+
+Here’s how the system flows step-by-step:
+
+1. **Node Exporter** runs on a server and collects data like:
+   - CPU usage
+   - Memory usage
+   - Disk space
+   - Network stats
+
+2. **Prometheus** checks Node Exporter every 15 seconds and stores that data in a time-series database.
+
+3. If any metrics go above your thresholds (like CPU > 85%), **Prometheus sends an alert to Alertmanager**.
+
+4. **Alertmanager** then sends that alert to Slack (or email/SMS), so the team knows something’s wrong.
+
+5. **Grafana** connects to Prometheus and shows all that data on cool visual charts.
+
+---
+
+## ⚠️ Alert Rules
+
+Here’s an example of when an alert will fire:
+
+- If **CPU usage is above 85% for more than 2 minutes**, send an alert.
+- If **Memory usage is above 90%**
+- If **Disk usage is above 90%**
+- If the **server is unreachable**
+
+These conditions are written in `alert.rules.yml`.
+
+---
+
+## 🧪 System Architecture Diagram
+
+```plaintext
++-----------------+       +--------------+       +------------------+
+| Node Exporter   | <---> |  Prometheus  | <---> |   Alertmanager   |
+| (on server)     |       | (scrapes)    |       | (sends alerts)   |
++-----------------+       +--------------+       +------------------+
+        |                            |
+        |                            |
+        +----------------------------+
+                     |
+              +--------------+
+              |   Grafana    |
+              | (Dashboard)  |
+              +--------------+
+
 
 
 Happy coding!# DevOps-Engineer-Take-Home-Submission
