@@ -6,7 +6,7 @@ This project demonstrates a monitoring, alerting, and visualization system suita
 
 ## 📌 Overview
 
-At Linq, maintaining infrastructure uptime, performance, and reliability is critical. This solution provides:
+At times, maintaining infrastructure uptime, performance, and reliability is critical. This solution provides:
 
 - ✅ Real-time monitoring of system metrics (CPU, memory, disk, network)
 - ✅ Alerting on high resource usage
@@ -65,6 +65,8 @@ Deployed with **Docker Compose**, includes:
 
 
 - **Directory Setup**:
+
+```plaintext
 devops-monitoring/
 ├── docker-compose.yml
 ├── prometheus/
@@ -74,7 +76,6 @@ devops-monitoring/
 ├── grafana/
 │   └── dashboards/
 ├── README.md
-
 
 ### 📈 Scalability
 - Add more servers by installing Node Exporter on each and updating Prometheus targets
