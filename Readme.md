@@ -1,4 +1,4 @@
-# 📊 DevOps Engineer Take-Home Assessment   --Abishek kc 
+# 📊 SRE Toolkit: End-to-End Monitoring, Alerting & Visualization with Prometheus & Grafana   --Abishek kc 
 
 This project demonstrates a monitoring, alerting, and visualization system suitable for ensuring system reliability at scale. It uses modern DevOps tools like **Prometheus**, **Grafana**, **Node Exporter**, **Alertmanager**, and **Docker Compose** to monitor server health and notify the team when things go wrong.
 
