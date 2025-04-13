@@ -76,7 +76,7 @@ devops-monitoring/
 ├── grafana/
 │   └── dashboards/
 ├── README.md
-
+```
 ### 📈 Scalability
 - Add more servers by installing Node Exporter on each and updating Prometheus targets
 - Use service discovery (e.g., Kubernetes, DNS, EC2 tags) for dynamic scaling
